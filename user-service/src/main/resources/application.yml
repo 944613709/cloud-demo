@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: userservice
+  cloud:
+    nacos:
+      discovery:
+        cluster-name: HZ
+      server-addr: localhost:8848
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud_user?useSSL=false
+    username: root
+    password: 250772730
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: cn.itcast.user.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    cn.itcast: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
